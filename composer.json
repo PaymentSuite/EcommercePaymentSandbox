@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "paymentsuite/ecommerce-payment-sandbox",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "The \"Ecommerce Payment Sandbox\" distribution",
     "autoload": {
         "psr-0": { "": "src/" }
     },
