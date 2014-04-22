@@ -2,7 +2,7 @@
 
 namespace Mmoreram\PaymentBridgeBundle\Services;
 
-use Mmoreram\PaymentCoreBundle\Services\Interfaces\PaymentBridgeInterface;
+use PaymentSuite\PaymentCoreBundle\Services\Interfaces\PaymentBridgeInterface;
 use Doctrine\ORM\EntityManager;
 
 class PaymentBridge implements PaymentBridgeInterface
@@ -18,7 +18,7 @@ class PaymentBridge implements PaymentBridgeInterface
 
     /**
      * @var EntityManager
-     * 
+     *
      * Entity manager
      */
     private $entityManager;
@@ -81,7 +81,7 @@ class PaymentBridge implements PaymentBridgeInterface
 
     /**
      * Given an id, find Order
-     * 
+     *
      * @return Object order
      */
     public function findOrder($orderId)
@@ -97,7 +97,7 @@ class PaymentBridge implements PaymentBridgeInterface
 
     /**
      * Get currency
-     * 
+     *
      * @return string
      */
     public function getCurrency()
@@ -108,7 +108,7 @@ class PaymentBridge implements PaymentBridgeInterface
 
     /**
      * Get amount
-     * 
+     *
      * @return integer
      */
     public function getAmount()
@@ -119,7 +119,7 @@ class PaymentBridge implements PaymentBridgeInterface
 
     /**
      * Get extra data
-     * 
+     *
      * @return array
      */
     public function getExtraData()

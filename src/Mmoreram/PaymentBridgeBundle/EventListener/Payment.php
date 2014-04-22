@@ -2,9 +2,9 @@
 
 namespace Mmoreram\PaymentBridgeBundle\EventListener;
 
-use Mmoreram\PaymentCoreBundle\Event\PaymentOrderSuccessEvent;
-use Mmoreram\PaymentCoreBundle\Event\PaymentOrderFailEvent;
-use Mmoreram\FrontBundle\Entity\Order;
+use PaymentSuite\PaymentCoreBundle\Event\PaymentOrderSuccessEvent;
+use PaymentSuite\PaymentCoreBundle\Event\PaymentOrderFailEvent;
+use PaymentSuite\FrontBundle\Entity\Order;
 use Doctrine\ORM\EntityManager;
 use Swift_Mailer;
 use Swift_Message;
@@ -19,7 +19,7 @@ class Payment
 
     /**
      * @var EntityManager
-     * 
+     *
      * Entity manager
      */
     private $entityManager;
@@ -65,7 +65,7 @@ class Payment
         $this->entityManager->persist($order);
         $this->entityManager->flush();
 
-        $paymentOrderSuccessEvent->getPaymentBridge()->setOrder($order);        
+        $paymentOrderSuccessEvent->getPaymentBridge()->setOrder($order);
     }
 
 
@@ -76,6 +76,6 @@ class Payment
      */
     public function onPaymentFail(PaymentOrderFailEvent $paymentOrderFailEvent)
     {
-        
+
     }
 }
