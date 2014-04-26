@@ -41,7 +41,4 @@ To see a real-live Ecommerce Sandbox page in action, access the following page:
 
     web/app_dev.php
 
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
 Enjoy!
